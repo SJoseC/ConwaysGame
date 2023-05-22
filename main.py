@@ -10,7 +10,7 @@ pygame.display.set_icon(ICON)
 RES = WIDTH, HEIGHT = 1280, 720
 TILE = 10
 W, H= WIDTH // TILE, HEIGHT // TILE
-FPS = 5
+FPS = 30
 
 #Initial pygame function and main loop
 
@@ -19,6 +19,8 @@ surface = pygame.display.set_mode(RES)
 clock = pygame.time.Clock()
 
 NEXT_FIELD = [[0 for i in range(W)] for j in range(H)]
+
+#This determines an initial state for the grid. Specific configurations lead to specific patherns
 CURRENT_FIELD = [[randint(0,1) for i in range (W)] for i in range (H)]
 
 #Cell-Checking function
